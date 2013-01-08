@@ -29,10 +29,10 @@ How to use
         }
 }</code></pre>
 
-Dependencies
+Provided dependencies
 ====
 1. *abcl (version 1.1.0)* - to load and run Maxima (for some reason 1.0.1 is last version in maven)
-2. *maxima.jar* - packed and slightly patched sources of Maxima (can be found in *lib* directory)
+2. *maxima.jar* - packed and slightly patched sources of Maxima
 
 
 Notes
