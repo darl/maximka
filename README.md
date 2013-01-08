@@ -11,7 +11,7 @@ How to use
 <pre><code>&lt;repositories>
       &lt;repository>
         &lt;id>maximka-repo&lt;/id>
-        &lt;url>http://dl.dropbox.com/u/11987354/repo&lt;/url>
+        &lt;url>http://dl.dropbox.com/u/11987354/repo &lt;/url>
       &lt;/repository>
 &lt;/repositories>
 </code></pre>
