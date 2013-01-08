@@ -1,9 +1,14 @@
 Maximka
 ===
 
-*Maximka* - java interface for the Maxima computer algebra system.
+**Maximka** - java interface for the Maxima computer algebra system.
 
 ABCL (http://common-lisp.net/project/armedbear/) is used to run Maxima.
+
+Dependencies
+====
+1. *abcl (version 1.1.0)* - to load and run Maxima (for some reason 1.0.1 is last version in maven)
+2. *maxima.jar* - packed and slightly patched sources of Maxima (can be found in *lib* directory)
 
 
 Notes
