@@ -23,3 +23,32 @@ Notes
 3. Sometimes can unexpectedly fail with "Unhandled lisp condition" 
    (try to run ABCLMaximaEvaluatorTest.testPerformance() multiple times)
 
+How to build maxima.jar
+====
+1. download maxima sources from http://sourceforge.net/projects/maxima/files/Maxima-source/
+2. unpack sources to %maxima-sources%
+3. cd %maxima-sources%/src
+4. edit maxima.asd 
+<pre>--- src/maxima.asd   2 Jan 2011 06:11:33 -0000	1.18
++++ src/maxima.asd	27 Feb 2011 09:28:47 -0000
+@@ -9,9 +9,9 @@
+     ;; Don't try to optimize so much in ECL.
+     ;; Therefore functions can be redefined (essential for share libraries).
+     #+ecl (declaim (optimize (debug 2)))
+-
++#+nil
+     (defvar *binary-output-dir* "binary-ecl")
+-
++#+nil
+     (defmethod output-files :around ((operation compile-op) (c source-file))
+       (let* ((source (component-pathname c))
+             (source-dir (pathname-directory source))</pre>
+4. run abcl repl: *java -XX:MaxPermSize=128m -jar .../abcl.jar*
+5. execute commands
+<pre>
+(require :abcl-contrib)
+(require :asdf-jar)
+(asdf-jar:package :maxima)</pre>
+6. you will see location of your file in temp directory
+
+p.s. if you cannot load *asdf-jar* try to replace *abcl-contrib.jar* with file from older release (for example 1.0.1)
