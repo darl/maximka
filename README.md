@@ -5,6 +5,10 @@ Maximka
 
 ABCL (http://common-lisp.net/project/armedbear/) is used to run Maxima.
 
+How to use
+====
+*todo*
+
 Dependencies
 ====
 1. *abcl (version 1.1.0)* - to load and run Maxima (for some reason 1.0.1 is last version in maven)
