@@ -7,7 +7,27 @@ ABCL (http://common-lisp.net/project/armedbear/) is used to run Maxima.
 
 How to use
 ====
-*todo*
+1. add repo
+<pre><code>&lt;repositories>
+      &lt;repository>
+        &lt;id>darl-repo&lt;/id>
+        &lt;url>http://dl.dropbox.com/u/11987354/repo&lt;/url>
+      &lt;/repository>
+&lt;/repositories>
+</code></pre>
+2. add dependency
+<pre><code>&lt;dependency>
+      &lt;groupId>com.github.darl&lt;/groupId>
+      &lt;artifactId>maximka&lt;/artifactId>
+      &lt;version>1.0&lt;/version>
+&lt;/dependency></code></pre>
+3. use it!
+<pre><code>public class App {
+        public static void main(String[] args) throws MaximaException {
+            MaximaEvaluator ev = new ABCLMaximaEvaluator();
+            System.out.println(ev.eval("integrate(1/x, x, 2, 7)")); //should print log(7)-log(2)
+        }
+}</code></pre>
 
 Dependencies
 ====
