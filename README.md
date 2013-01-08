@@ -10,7 +10,7 @@ How to use
 1. add repo
 <pre><code>&lt;repositories>
       &lt;repository>
-        &lt;id>darl-repo&lt;/id>
+        &lt;id>maximka-repo&lt;/id>
         &lt;url>http://dl.dropbox.com/u/11987354/repo&lt;/url>
       &lt;/repository>
 &lt;/repositories>
